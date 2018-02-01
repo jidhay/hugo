@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG BUILD_DATE="2018-01-31T11:48:00Z
+ARG BUILD_DATE="2018-01-31T11:48:00Z"
 ARG VERSION="0.35"
 
 LABEL org.label-schema.schema-version="1.0.0-rc.1"
