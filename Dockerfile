@@ -1,7 +1,9 @@
 FROM alpine:latest
 
-ARG BUILD_DATE="2018-01-31T11:48:00Z"
-ARG VERSION="0.35"
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VCS_URL
+ARG VERSION=0.35
 
 LABEL org.label-schema.schema-version="1.0.0-rc.1"
 LABEL org.label-schema.build-date=$BUILD_DATE
@@ -9,6 +11,8 @@ LABEL org.label-schema.name="hugo"
 LABEL org.label-schema.description="Lightweight Alpine-Based Docker Image for Hugo"
 LABEL org.label-schema.url="https://gohugo.io/"
 LABEL org.label-schema.version=$VERSION
+LABEL org.label-schema.vcs-url=$VCS_URL
+LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.docker.cmd="docker run --rm --name=hugo -v ${PWD}:/home/hugo jidhay/hugo"
 LABEL org.label-schema.docker.cmd.help="docker run --rm --name=hugo -v ${PWD}:/home/hugo jidhay/hugo help"
 MAINTAINER Jean-Damien Hatzenbuhler <jd.hatzenbuler@gmail.com>
