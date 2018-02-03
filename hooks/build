@@ -11,7 +11,7 @@ echo "Building Version: ${VERSION}"
 
 BUILD_HUGO_VERSION=""
 
-if [ "${VERSION}" == "latest" ]
+if [ "${VERSION}" == "" ]
 then
   $BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=`git tag | sort | tail -n 1`"
 fi
