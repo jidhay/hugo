@@ -1,0 +1,15 @@
+#!/bin/bash
+# Description:
+#  Build a Lightweight Alpine-Based Docker Image for Hugo
+# Requires:
+# - 'docker'    : https://www.docker.com
+# Environments:
+# - $IMAGE_NAME : The name of the Docker Image
+
+echo "Building Docker Image: ${IMAGE_NAME}"
+
+docker build \
+--build-arg VCS_REF=`git rev-parse --short HEAD` \
+--build-arg VCS_URL=`git config --get remote.origin.url` \
+--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+-t $IMAGE_NAME .
