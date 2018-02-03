@@ -13,13 +13,14 @@ BUILD_HUGO_VERSION=""
 
 if [ "${VERSION}" == "" ]
 then
-  $BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=`git tag | sort | tail -n 1`"
+  $TEST=`git tag | sort | tail -n 1`
+  echo "Tag ${TEST}"
+  $BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${TEST}"
 fi
 
 docker build \
 --build-arg VCS_REF=`git rev-parse --short HEAD` \
 --build-arg VCS_URL=`git config --get remote.origin.url` \
 --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
---build-arg HUGO_VERSION=`git tag | sort | tail -n 1` \
 $BUILD_HUGO_VERSION \
 -t $IMAGE_NAME .
