@@ -10,7 +10,7 @@ Lightweight Alpine-Based Docker Image for [Hugo](https://gohugo.io/) which :
 
 The image use the [Label Schema](http://label-schema.org/rc1/) .
 
-Latest build contains the Hugo v0.30.2
+Latest build contains the Hugo v0.30.1
 
 # Build
 To build the image from DockerFile :
