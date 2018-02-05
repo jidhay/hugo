@@ -13,7 +13,7 @@ BUILD_HUGO_VERSION=""
 
 if [ "${VERSION}" == "" ]
 then
-  TEST=`git tag | sort | tail -n 1`
+  TEST=`cat README.md | sed -n "s/Latest build contains the Hugo v\([0-9.]\+\)/\1/p"`
   echo "Tag ${TEST}"
   BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${TEST}"
 fi
