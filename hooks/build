@@ -3,19 +3,23 @@
 #  Build a Lightweight Alpine-Based Docker Image for Hugo
 # Requires:
 # - 'docker'    : https://www.docker.com
+# - 'git'       : https://git-scm.com
 # Environments:
 # - $IMAGE_NAME : The name of the Docker Image
+# - $VERSION    : The version of the Docker Image
 
 echo "Building Docker Image: ${IMAGE_NAME}"
-echo "Building Version: ${VERSION}"
 
 BUILD_HUGO_VERSION=""
 
 if [ "${VERSION}" == "" ]
 then
-  TEST=`cat README.md | sed -n "s/Latest build contains the Hugo v\([0-9.]\+\)/\1/p"`
-  echo "Tag ${TEST}"
-  BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${TEST}"
+  echo "Building Version: latest"
+  HUGO_VERSION=`cat README.md | sed -n "s/Latest build contains the Hugo v\([0-9.]\+\)/\1/p"`
+  echo "Hugo Version: ${HUGO_VERSION}"
+  BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${HUGO_VERSION}"
+else
+  echo "Building Version: ${VERSION}"
 fi
 
 docker build \
