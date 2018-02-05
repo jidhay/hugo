@@ -13,9 +13,9 @@ BUILD_HUGO_VERSION=""
 
 if [ "${VERSION}" == "" ]
 then
-  $TEST=`git tag | sort | tail -n 1`
+  TEST=`git tag | sort | tail -n 1`
   echo "Tag ${TEST}"
-  $BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${TEST}"
+  BUILD_HUGO_VERSION="--build-arg HUGO_VERSION=${TEST}"
 fi
 
 docker build \
