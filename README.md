@@ -10,12 +10,12 @@ Lightweight Alpine-Based Docker Image for [Hugo](https://gohugo.io/) which :
 
 The image use the [Label Schema](http://label-schema.org/rc1/) .
 
-Latest build contains the Hugo v0.36
+Latest build contains the Hugo v0.35
 
 # Build
 To build the image from DockerFile :
 ```bash
-docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VERSION="0.35" -t hugo:0.35 -t hugo ..
+docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VERSION="0.36" -t hugo:0.36 -t hugo ..
 ```
 
 # Usage
