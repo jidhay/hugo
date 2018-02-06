@@ -1,6 +1,6 @@
 # Docker Image
 
-[![](https://images.microbadger.com/badges/image/jidhay/hugo.svg)](https://microbadger.com/images/jidhay/hugo "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jidhay/hugo.svg)](https://microbadger.com/images/jidhay/hugo "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/jidhay/hugo.svg)](https://microbadger.com/images/jidhay/hugo "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jidhay/hugo.svg)](https://microbadger.com/images/jidhay/hugo "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/jidhay/hugo.svg)](https://microbadger.com/images/jidhay/hugo "Get your own commit badge on microbadger.com")
 
 # Description
 Lightweight Alpine-Based Docker Image for [Hugo](https://gohugo.io/) which :

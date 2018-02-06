@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.name="hugo"
 LABEL org.label-schema.description="Lightweight Alpine-Based Docker Image for Hugo"
 LABEL org.label-schema.url="https://gohugo.io/"
-LABEL org.label-schema.version=$VERSION
+LABEL org.label-schema.version=$HUGO_VERSION
 LABEL org.label-schema.vcs-url=$VCS_URL
 LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.docker.cmd="docker run --rm --name=hugo -v ${PWD}:/home/hugo jidhay/hugo"
